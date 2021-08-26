@@ -15,7 +15,7 @@ namespace DatabaseFirstLINQ
         }
         public void RunLINQQueries()
         {
-            //ProblemOne();
+            ProblemOne();
             //ProblemTwo();
             ProblemThree();
             //ProblemFour();
@@ -42,6 +42,11 @@ namespace DatabaseFirstLINQ
         // HINT: .ToList().Count
         private void ProblemOne()
         {
+<<<<<<< HEAD
+=======
+            // Write a LINQ query that returns the number of users in the Users table.
+            // HINT: .ToList().Count
+>>>>>>> a0c7a6509837d203aab99c5cc2f3bd53c7f90828
             int users = _context.Users.ToList().Count;
             Console.WriteLine(users);
         }
