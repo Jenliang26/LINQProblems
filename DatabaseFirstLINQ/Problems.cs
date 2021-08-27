@@ -15,10 +15,10 @@ namespace DatabaseFirstLINQ
         }
         public void RunLINQQueries()
         {
-            ProblemOne();
+            //ProblemOne();
             //ProblemTwo();
-            ProblemThree();
-            //ProblemFour();
+            //ProblemThree();
+            ProblemFour();
             //ProblemFive();
             //ProblemSix();
             //ProblemSeven();
@@ -38,17 +38,12 @@ namespace DatabaseFirstLINQ
         }
 
         // <><><><><><><><> R Actions (Read) <><><><><><><><><>
-        // Write a LINQ query that returns the number of users in the Users table.
-        // HINT: .ToList().Count
         private void ProblemOne()
         {
-<<<<<<< HEAD
-=======
             // Write a LINQ query that returns the number of users in the Users table.
             // HINT: .ToList().Count
->>>>>>> a0c7a6509837d203aab99c5cc2f3bd53c7f90828
             int users = _context.Users.ToList().Count;
-            Console.WriteLine(users);
+            { Console.WriteLine(users); }
         }
 
         private void ProblemTwo()
@@ -67,10 +62,10 @@ namespace DatabaseFirstLINQ
         {
             // Write a LINQ query that gets each product where the products price is greater than $150.
             // Then print the name and price of each product from the above query to the console.
-            var products = _context.Products.Where(p => p.price >= 150).ToList();
+            var products = _context.Products.Where(p => p.Price >= 150).ToList();
             foreach(var product in products)
             {
-                Console.WriteLine(product.name + " " + product.price);
+                Console.WriteLine(product.Name + " " + product.Price);
             }
         }
 
@@ -78,7 +73,11 @@ namespace DatabaseFirstLINQ
         {
             // Write a LINQ query that gets each product that contains an "s" in the products name.
             // Then print the name of each product from the above query to the console.
-
+            var products = _context.Products.Where(p => p.Name.Contains("s")).ToList();
+            foreach (Product product in products)
+            {
+                Console.WriteLine(product.Name);
+            }
         }
 
         private void ProblemFive()
