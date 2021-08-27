@@ -16,18 +16,9 @@ namespace DatabaseFirstLINQ
         public void RunLINQQueries()
         {
             //ProblemOne();
-<<<<<<< HEAD
-            ProblemTwo();
-            //ProblemThree();
-            ProblemOne();
             //ProblemTwo();
-            ProblemThree();
+            //ProblemThree();
             //ProblemFour();
-=======
-            //ProblemTwo();
-            //ProblemThree();
-            ProblemFour();
->>>>>>> b86e2f9d4ef46251b5a7dcba28e5127a569eaa79
             //ProblemFive();
             //ProblemSix();
             //ProblemSeven();
@@ -47,9 +38,6 @@ namespace DatabaseFirstLINQ
         }
 
         // <><><><><><><><> R Actions (Read) <><><><><><><><><>
-<<<<<<< HEAD
-        // Write a LINQ query that returns the number of users in the Users table.
-        // HINT: .ToList().Count
         private void ProblemOne()
         {
 
@@ -57,14 +45,6 @@ namespace DatabaseFirstLINQ
             // HINT: .ToList().Count
             int users = _context.Users.ToList().Count;
             Console.WriteLine(users);
-=======
-        private void ProblemOne()
-        {
-            // Write a LINQ query that returns the number of users in the Users table.
-            // HINT: .ToList().Count
-            int users = _context.Users.ToList().Count;
-            { Console.WriteLine(users); }
->>>>>>> b86e2f9d4ef46251b5a7dcba28e5127a569eaa79
         }
 
         private void ProblemTwo()
@@ -83,33 +63,24 @@ namespace DatabaseFirstLINQ
         {
             // Write a LINQ query that gets each product where the products price is greater than $150.
             // Then print the name and price of each product from the above query to the console.
-<<<<<<< HEAD
-            var products = _context.Products.Where(p => p.price >= 150).ToList();
-            foreach(var product in products)
-            {
-                Console.WriteLine(product.name + " " + product.price);
-=======
+
             var products = _context.Products.Where(p => p.Price >= 150).ToList();
-            foreach(var product in products)
+            foreach (var product in products)
             {
                 Console.WriteLine(product.Name + " " + product.Price);
->>>>>>> b86e2f9d4ef46251b5a7dcba28e5127a569eaa79
-            }
+            }  
         }
 
         private void ProblemFour()
         {
             // Write a LINQ query that gets each product that contains an "s" in the products name.
             // Then print the name of each product from the above query to the console.
-<<<<<<< HEAD
 
-=======
             var products = _context.Products.Where(p => p.Name.Contains("s")).ToList();
             foreach (Product product in products)
             {
                 Console.WriteLine(product.Name);
             }
->>>>>>> b86e2f9d4ef46251b5a7dcba28e5127a569eaa79
         }
 
         private void ProblemFive()
